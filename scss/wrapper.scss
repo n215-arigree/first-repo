@@ -1,0 +1,51 @@
+.wrapper {
+    background-color: cadetblue;
+    margin: 0 auto;
+    max-width: 960px; //responsive, lets paragraph shrink with adjustments
+    padding: 20px;
+    .respo-box {
+        width: 90%; //responsive
+        margin: 0 auto;
+        min-height: 400px; //responsive
+        background-color: green;
+        .boxes {
+            background-color: blue;
+            width: 100%; //responsive
+            min-height: 50px; //responsive
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            .left {
+                background-color: yellow;
+                width: 300px; 
+                height: 50px; 
+            }
+            .right {
+                background-color: red;
+                width: 300px;
+                height: 50px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 730px) {
+    .wrapper {
+        .respo-box {
+            .boxes{
+                flex-direction: column;
+                .left{
+                    width: 100%;
+                    margin-bottom: 20px;
+                    
+                }
+                .right{
+                    width: 100%;
+                    margin-bottom: 20px;
+                    
+                }
+            }
+        }
+    }
+
+}
